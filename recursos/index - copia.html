@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miel Los Chenes | Hopelchén Campeche</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --miel: #d4a017;
+    --oscuro: #3b2a1a;
+    --verde: #2e7d32;
+    --fondo: #fffaf1;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:var(--fondo);
+    color:#333;
+}
+
+/* HEADER */
+
+header{
+    background:var(--oscuro);
+    color:white;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:22px;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+    background:url('img/hero.jpg') center/cover no-repeat;
+    height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+    position:relative;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.5);
+    top:0;
+    left:0;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:700px;
+}
+
+.hero h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--miel);
+    color:white;
+    padding:15px 30px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#b8860b;
+}
+
+/* SECCIONES */
+
+section{
+    padding:80px 10%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:var(--oscuro);
+}
+
+/* BENEFICIOS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:var(--miel);
+}
+
+/* PRODUCTOS */
+
+.productos{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    align-items:center;
+    justify-content:center;
+}
+
+.producto{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    text-align:center;
+    width:280px;
+}
+
+.producto img{
+    width:100%;
+    max-height:220px;
+    object-fit:contain;
+}
+
+.precio{
+    font-size:20px;
+    font-weight:600;
+    color:var(--oscuro);
+    margin-top:10px;
+}
+
+/* MAYOREO */
+
+.mayoreo{
+    background:#fff3d6;
+    border-radius:20px;
+    text-align:center;
+}
+
+/* CTA */
+
+.cta{
+    background:var(--miel);
+    color:white;
+    text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--oscuro);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* WHATSAPP FLOTANTE */
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    color:white;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+@media(max-width:768px){
+    .hero h2{
+        font-size:28px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Miel Los Chenes</h1>
+    <a href="#contacto">Contacto</a>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Miel 100% Natural de Hopelchén</h2>
+        <p>Directamente de la zona de Los Chenes, Campeche. Producción artesanal.</p>
+        <a href="#productos" class="btn">Ver Presentaciones</a>
+    </div>
+</section>
+
+<section>
+    <h2>Beneficios de Nuestra Miel</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Energía Natural</h3>
+            <p>Fuente natural de energía sin químicos ni conservadores.</p>
+        </div>
+        <div class="card">
+            <h3>Refuerza el Sistema Inmunológico</h3>
+            <p>Propiedades antioxidantes y antibacterianas.</p>
+        </div>
+        <div class="card">
+            <h3>100% Pura</h3>
+            <p>Sin mezclas ni procesos industriales.</p>
+        </div>
+    </div>
+</section>
+
+<section id="productos">
+    <h2>Presentaciones Disponibles</h2>
+    <div class="productos">
+
+        <div class="producto">
+            <img src="img/botella-litro.png" alt="Miel 1 Litro">
+            <h3>Botella 1 Litro</h3>
+            <div class="precio">$80 MXN</div>
+            <br>
+            <button class="btn" onclick="enviarMensaje('1 Litro')">Solicitar información</button>
+        </div>
+
+        <div class="producto">
+            <img src="img/botella-medio.png" alt="Miel Medio Litro">
+            <h3>Botella Medio Litro</h3>
+            <div class="precio">$45 MXN</div>
+            <br>
+            <button class="btn" onclick="enviarMensaje('Medio Litro')">Solicitar información</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="mayoreo">
+    <h2>Venta al Mayoreo</h2>
+    <p>Para compras en volumen o distribución, solicita cotización personalizada.</p>
+    <br>
+    <button class="btn" onclick="enviarMensaje('Mayoreo')">Solicitar precio de mayoreo</button>
+</section>
+
+<section class="cta" id="contacto">
+    <h2>¿Te interesa nuestra miel?</h2>
+    <p>Contáctanos por WhatsApp y recibe atención directa.</p>
+</section>
+
+<footer>
+    © 2026 Miel Los Chenes - Hopelchén, Campeche
+</footer>
+
+<a class="whatsapp" id="btnWhats" target="_blank">💬</a>
+
+<script>
+
+const numero = "5219990000000"; // CAMBIA ESTE NUMERO
+
+function enviarMensaje(tipo){
+    let mensaje = "";
+
+    if(tipo === "1 Litro"){
+        mensaje = "Hola, me interesa la miel presentación 1 Litro.";
+    }
+    else if(tipo === "Medio Litro"){
+        mensaje = "Hola, me interesa la miel presentación Medio Litro.";
+    }
+    else{
+        mensaje = "Hola, me interesa información sobre venta de miel al mayoreo.";
+    }
+
+    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, "_blank");
+}
+
+document.getElementById("btnWhats").href = `https://wa.me/${numero}`;
+
+</script>
+
+</body>
+</html>
